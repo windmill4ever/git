@@ -1,0 +1,56 @@
+Git Bash
+
+无需跟踪.pyc
+创建.gitignore，输入
+__pycache__/
+
+
+初始化仓库，在目录文件里
+git init
+
+
+检查状态git status
+
+将文件加入仓库进行跟踪
+git add .
+.点指所有文件
+
+拍照
+git commit -m 'mymassage'
+-m表示记录'mymassage'
+
+
+查看提交历史
+git log
+git log --pretty=oneline
+
+第二次拍照
+git commit -am 'mymassage2'
+-a表示所有修改了的文件都拍照，m见上
+
+撤销修改
+git status  查看是否有作修改
+git checkout .
+放弃自从最后一次拍照后所做的所有修改，即回复到修改前的状态
+
+
+检出以前的提交（检出以前的提交后，最好不要对项目做任何修改
+git checkout abc123
+ID的前6位
+输入后 即离开分支master 
+进入Git的 分离头指针状态detached HEAD
+
+
+回到分支master
+git checkout master
+
+
+想恢复到某次照片abc123（永久的恢复）
+git reset --hard abc123
+
+删除仓库
+rm -rf .git
+对.git进行删除
+rm 是 linux 系统下删除文件的命令。-r 代表删除这个下面的一切，f 表示不需要用户确认
+
+
